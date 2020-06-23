@@ -1,0 +1,29 @@
+<form [formGroup]="myForm">
+
+    Value: {{ myForm.value | json }}
+
+    <hr><p>array-form works!</p>
+<mat-form-field class="full">
+    <input matInput placeholder="email" formControlName="email">
+</mat-form-field>
+
+<div formArrayName="jobs">
+    <div *ngFor="let jobs of jobsForms.controls; let i=index" [formGroupName]="i">
+        <mat-form-field>
+            <input matInput placeholder="coName" formControlName="coName">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="position" formControlName="position">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="start" formControlName="start">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="end" formControlName="end">
+        </mat-form-field>&nbsp;
+        <button mat-raised-button color="warn" (click)="deleteJobs()">Delete</button>
+    </div>
+
+</div>
+<button mat-raised-button color="primary" (click)="addJobs()">Add Past Job</button>
+</form>

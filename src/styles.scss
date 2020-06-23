@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; width: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+main {
+    padding: 1% 5%;
+}
+.row {
+    display: flex;
+    flex-direction: row;  
+}
+hr {
+    height: 0px;
+    border: 2px dashed #3f51b5;
+}
