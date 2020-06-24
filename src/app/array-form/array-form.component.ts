@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 @Component({
   selector: 'array-form',
-  template: '<div><p>{{ myForm.value }}</p></div>',
   templateUrl: './array-form.component.html',
   styleUrls: ['./array-form.component.scss']
 })

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'nested-form',
   templateUrl: './nested-form.component.html',
@@ -10,7 +10,10 @@ export class NestedFormComponent implements OnInit {
   
   myForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private route: ActivatedRoute,
+    private fb: FormBuilder
+    ) { }
 
   ngOnInit() {
     const phone = this.fb.group({

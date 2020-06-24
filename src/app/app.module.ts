@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatToolbarModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 import { NestedFormComponent } from './nested-form/nested-form.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { ArrayFormComponent } from './array-form/array-form.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,8 @@ import { ArrayFormComponent } from './array-form/array-form.component';
     BasicFormComponent,
     NestedFormComponent,
     DynamicFormComponent,
-    ArrayFormComponent
+    ArrayFormComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,10 @@ import { ArrayFormComponent } from './array-form/array-form.component';
     MatButtonModule,
     MatSelectModule,
     MatIconModule,
-    ReactiveFormsModule
+    MatToolbarModule,
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
