@@ -9,21 +9,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class BasicFormComponent implements OnInit {
   
   myForm: FormGroup;
-
+  
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      name: '',
+      name: ['', [
+        Validators.required
+      ]],
       email: ['', [
         Validators.required,
         Validators.email
       ]],
-      password: ['', [
+      password: [null, [
         Validators.required,
         Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$')
       ]],
-      location: ''
+      location: ['', [
+        Validators.required
+      ]],
+        
     })
     
     this.myForm.valueChanges.subscribe(console.log)
