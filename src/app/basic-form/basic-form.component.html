@@ -1,11 +1,9 @@
-<p>basic-form works!</p>
 <form [formGroup]="myForm">
     <hr>
     <div class="resume">
         Value: {{ myForm.value | json }}
     </div>
     <hr>
-    
     <mat-form-field>
         <input matInput placeholder="name" formControlName="name">
     </mat-form-field>
@@ -15,14 +13,14 @@
     </mat-form-field>
 <br>
     <mat-form-field>
-        <textarea matInput placeholder="your message..." formControlName="message"></textarea>
+        <input matInput placeholder="password" formControlName="password">
     </mat-form-field>
-<br>
+&nbsp;
     <mat-form-field>
-        <mat-select formControlName="career" placeholder="career">
-            <mat-option value="Magician">Magician</mat-option>
-            <mat-option value="Clown">Clown</mat-option>
-            <mat-option value="Juggler">Juggler</mat-option>
+        <mat-select formControlName="location" placeholder="location">
+            <mat-option value="Mid-City">Mid-City</mat-option>
+            <mat-option value="Uptown">Uptown</mat-option>
+            <mat-option value="Downtown">Downtown</mat-option>
         </mat-select>
     </mat-form-field>
 <br>

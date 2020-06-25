@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'basic-form',
+  selector: 'basic-signup-form',
   templateUrl: './basic-form.component.html',
   styleUrls: ['./basic-form.component.scss']
 })
@@ -14,12 +14,26 @@ export class BasicFormComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      email: '',
-      message: '',
-      career: ''
+      name: '',
+      email: ['', [
+        Validators.required,
+        Validators.email
+      ]],
+      password: ['', [
+        Validators.required,
+        Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$')
+      ]],
+      location: ''
     })
     
     this.myForm.valueChanges.subscribe(console.log)
+  }
+  get email() {
+    return this.myForm.get('email');
+  }
+
+  get password() {
+    return this.myForm.get('password');
   }
 
 }

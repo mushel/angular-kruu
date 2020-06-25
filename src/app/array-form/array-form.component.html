@@ -15,15 +15,18 @@
         <mat-form-field>
             <input matInput placeholder="position" formControlName="position">
         </mat-form-field>&nbsp;
-        <mat-form-field>
-            <input matInput placeholder="start" formControlName="start">
+        <!-- <mat-form-field>
+            <input matInput placeholder="start" formControlName="start">    
         </mat-form-field>&nbsp;
         <mat-form-field>
             <input matInput placeholder="end" formControlName="end">
-        </mat-form-field>&nbsp;
+        </mat-form-field>&nbsp; -->
+        
+        <range-picker></range-picker>
         <button mat-raised-button color="warn" (click)="deleteJobs()">Delete</button>
     </div>
-
 </div>
+
 <button mat-raised-button color="primary" (click)="addJobs()">Add Past Job</button>
+
 </form>

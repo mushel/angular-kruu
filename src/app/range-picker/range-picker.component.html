@@ -1,0 +1,39 @@
+
+<!-- <mat-form-field appearance="fill">
+    <mat-label>Start date</mat-label>
+    <input matInput [matDatepicker]="pickerStart">
+    <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
+    <mat-datepicker #pickerStart startView="multi-year"></mat-datepicker>
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field appearance="fill">
+    <mat-label>End date</mat-label>
+    <input matInput [matDatepicker]="pickerEnd">
+    <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+    <mat-datepicker #pickerEnd></mat-datepicker>
+  </mat-form-field>-->
+  &nbsp; 
+  <mat-form-field>
+    <mat-label>Start Month and Year</mat-label>
+    <input matInput [matDatepicker]="dp" [formControl]="date">
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp
+                    startView="multi-year"
+                    (yearSelected)="chosenYearHandler($event)"
+                    (monthSelected)="chosenMonthHandler($event, dp)"
+                    panelClass="example-month-picker">
+    </mat-datepicker>
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field>
+    <mat-label>End Month and Year</mat-label>
+    <input matInput [matDatepicker]="dpe" [formControl]="dateEnd">
+    <mat-datepicker-toggle matSuffix [for]="dpe"></mat-datepicker-toggle>
+    <mat-datepicker #dpe
+                    startView="multi-year"
+                    (yearSelected)="chosenYearHandlerEnd($event)"
+                    (monthSelected)="chosenMonthHandlerEnd($event, dpe)"
+                    panelClass="example-month-picker">
+    </mat-datepicker>
+  </mat-form-field>
+  &nbsp;

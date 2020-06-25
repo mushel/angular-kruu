@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
+
 @Component({
   selector: 'array-form',
   templateUrl: './array-form.component.html',
@@ -8,6 +9,8 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 export class ArrayFormComponent implements OnInit {
   
   myForm: FormGroup;
+  // date = new FormControl(new Date());
+  // serializedDate = new FormControl((new Date()).toISOString());
 
   constructor(private fb: FormBuilder) { }
 
@@ -27,8 +30,8 @@ export class ArrayFormComponent implements OnInit {
     const jobs = this.fb.group({
       coName: [],
       position: [],
-      start: [],
-      end: [],
+      date: [],
+      dateEnd: [],
     })
     this.jobsForms.push(jobs);
   }

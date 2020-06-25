@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatToolbarModule } from '@angular/material';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 import { NestedFormComponent } from './nested-form/nested-form.component';
@@ -12,7 +14,8 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { ArrayFormComponent } from './array-form/array-form.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { RangePickerComponent } from './range-picker/range-picker.component';
+import { MomentDateAdapter, MatMomentDateModule } from '@angular/material-moment-adapter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
     NestedFormComponent,
     DynamicFormComponent,
     ArrayFormComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    RangePickerComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatToolbarModule,
     ReactiveFormsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatMomentDateModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
