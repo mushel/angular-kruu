@@ -6,6 +6,10 @@ export const environment = {
   production: false
 };
 
+RDS_HOSTNAME = 'database-kruu.cjtizh8jjvj0.us-east-1.rds.amazonaws.com',
+RDS_USER =  'admin',
+RDS_PASSWORD = ChangeM3,
+RDS_PORT = 3306
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
