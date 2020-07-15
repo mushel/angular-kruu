@@ -16,6 +16,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RangePickerComponent } from './range-picker/range-picker.component';
 import { MomentDateAdapter, MatMomentDateModule } from '@angular/material-moment-adapter';
+import { RegistrationComponent } from './registration/registration.component';
+import { InfoComponent } from './info/info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { MomentDateAdapter, MatMomentDateModule } from '@angular/material-moment
     DynamicFormComponent,
     ArrayFormComponent,
     ToolbarComponent,
-    RangePickerComponent
+    RangePickerComponent,
+    RegistrationComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
